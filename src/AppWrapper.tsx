@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import { RootStackParamList } from './lib/RootStackParamList';
 import { StatusBar, useColorScheme } from 'react-native';
+import { AuthProvider } from './hooks/auth';
 
 export default function AppWrapper() {
   let navigationRef =
@@ -19,7 +20,9 @@ export default function AppWrapper() {
         backgroundColor={isDarkMode ? '#fff' : '#000'}
         barStyle={isDarkMode ? 'dark-content' : 'light-content'}
       />
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </NavigationContainer>
   );
 }
