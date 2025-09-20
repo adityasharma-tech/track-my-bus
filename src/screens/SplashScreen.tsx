@@ -4,9 +4,9 @@ import { RootStackParamList } from '../lib/RootStackParamList';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useAuth } from '../hooks/auth';
 
-type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Splash'>;
+type SplashScreenProps = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 
-export default function SplashScreen({ navigation }: HomeScreenProps) {
+export default function SplashScreen({ navigation }: SplashScreenProps) {
   const auth = useAuth();
 
   useEffect(() => {

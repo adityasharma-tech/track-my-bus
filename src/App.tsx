@@ -20,7 +20,13 @@ export default function App() {
         <RootStack.Screen name="Splash" component={SplashScreen} />
         <RootStack.Screen name="Home" component={HomeScreen} />
         <RootStack.Screen name="Auth" component={AuthScreen} />
-        <RootStack.Screen name="UniversityPicker" component={UniversityPickerScreen} />
+        <RootStack.Screen
+          name="UniversityPicker"
+          component={UniversityPickerScreen}
+          initialParams={{
+            select: false,
+          }}
+        />
       </React.Fragment>
     </RootStack.Navigator>
   );
